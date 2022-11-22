@@ -33,6 +33,8 @@ public:
     }
 };
 
+
+// Task 3, create a method to add two user-defined classes.
 A add(A a1, A a2) { 
     return A(a1.get_value() + a2.get_value());
 }
