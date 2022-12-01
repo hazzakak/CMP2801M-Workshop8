@@ -7,7 +7,6 @@ void A::print()
 
 A A::operator+(const A& obj)
 {
-    
     // creating temporary object to return
     A aTemp(0);
 
@@ -16,7 +15,7 @@ A A::operator+(const A& obj)
     return aTemp;
 }
 
-A A::operator++(int)
+A A::operator++()
 {
     // created int tempVal after A(value+1) caused the initial object to increment.
     int tempVal = value + 1;

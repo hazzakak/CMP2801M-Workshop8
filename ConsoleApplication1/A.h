@@ -18,7 +18,7 @@ public:
     A operator + (const A& obj);
 
     // overloads ++ to increment the value parameter.
-    A operator ++ (int);
+    A operator ++ ();
 
     // Task 3, create a method to add two user-defined classes.
     A add(A a1, A a2);

@@ -17,7 +17,7 @@ int main()
     a3.print();// "My value is 5"
 
     A a4 = a1+a2+a3; // adds 2+3+5 == 10
-    A a5 = a4++; // incrememnts a4
+    A a5 = ++a4; // incrememnts a4
     a4.print(); // "My value is 10"
     a5.print(); // "My value is 11"
 
