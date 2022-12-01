@@ -2,42 +2,8 @@
 //
 
 #include <iostream>
+#include "A.h"
 using namespace std;
-
-class A {
-private:
-    int value;
-public:
-    // used a getter, as it's the only way to access a private variable from outside the class.
-    // add() was declared outside of A so value needed to be public.
-    int get_value() { return value; }
-    
-    A(int v) : value(v) {}
-    void print() { cout << "My value is " << value << endl; }
-
-    // overloads + to add a.values to each other to return another A object,
-    A operator + (const A& obj) {
-        // creating temporary object to return
-        A aTemp(0);
-
-        // add 'value' of a object given in argments, to current A.value.
-        aTemp.value = value + obj.value;
-        return aTemp;
-    }
-
-    // overloads ++ to increment the value parameter.
-    A operator ++ (int) { 
-        // created int tempVal after A(value+1) caused the initial object to increment.
-        int tempVal = value + 1;
-        return A(tempVal);
-    }
-};
-
-
-// Task 3, create a method to add two user-defined classes.
-A add(A a1, A a2) { 
-    return A(a1.get_value() + a2.get_value());
-}
 
 int main()
 {
